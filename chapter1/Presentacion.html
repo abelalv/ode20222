@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecuaciones diferenciales &#8212; Una introducción a las ecuaciones diferenciales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/images.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Una introducción a las ecuaciones diferenciales</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bienvenido al curso de ecuaciones diferenciales ordinarias
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="section1.html">
+   Unidad 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter1/Presentacion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter1/Presentacion.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapter1/Presentacion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Ecuaciones diferenciales
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivos-genenerales">
+     Objetivos genenerales
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivos-especificos">
+     Objetivos específicos
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodologia">
+     Metodología
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unidades-tematicas">
+     Unidades temáticas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actividades-de-evaluacion">
+     Actividades de evaluación
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliografia">
+   Bibliografía
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Ecuaciones diferenciales</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Ecuaciones diferenciales
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivos-genenerales">
+     Objetivos genenerales
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivos-especificos">
+     Objetivos específicos
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodologia">
+     Metodología
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unidades-tematicas">
+     Unidades temáticas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actividades-de-evaluacion">
+     Actividades de evaluación
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliografia">
+   Bibliografía
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="ecuaciones-diferenciales">
+<h1>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Permalink to this headline">#</a></h1>
+<p>La asignatura de Ecuaciones Diferenciales está ubicada en el quinto semestre   dentro del Núcleo de Formación Fundamental, de las carreras de Ingeniería Civil, Electrónica, Industrial, así como de la carrera de Matemáticas Aplicadas, este núcleo fundamental comprende las asignaturas que proporcionan los conocimientos en ciencias naturales, matemáticas y las ciencias básicas de la ingeniería, que permitirán al estudiante formular y resolver problemas inherentes en sus carreras. La importancia de esta asignatura estriba en el hecho de que las ecuaciones diferenciales son la expresión matemática de aquéllas leyes fundamentales de la naturaleza que son formuladas en términos de razones de cambio de cantidades variables. Estas leyes surgen en diversos campos de aplicación; por ejemplo, en oscilaciones no lineales, movimientos newtonianos y no newtonianos, difusión de calor, elasticidad, estudio de fluidos y muchos otros.</p>
+<p>El análisis de las soluciones tanto teóricas como numéricas de las ecuaciones diferenciales es fundamental para la investigación y comprensión de los fenómenos naturales o teóricos que representan; tanto el estudio de las propiedades generales de las ecuaciones, que nos proporciona información valiosa que se puede aplicar en cada caso particular; como su complemento, la resolución numérica, que permite construir soluciones de una ecuación,  paso a paso en la vecindad de un punto y con cierto margen de error. Dado el tiempo limitado de estudio de esta asignatura, el enfoque de las ecuaciones diferenciales será desde su parte teórica con aplicaciones a problemas que emergen en ciertos fenómenos naturales. Esto permitirá crear un sustento teórico que permita al estudiante analizar y comprender los resultados numéricos de problemas que involucran formulaciones diferenciales, bien sea en cursos paralelos o posteriores.</p>
+<div class="section" id="objetivos-genenerales">
+<h2>Objetivos genenerales<a class="headerlink" href="#objetivos-genenerales" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Al terminar el curso el alumno será capaz de comprender el papel que juegan las ecuaciones diferenciales para modelar una gran cantidad de fenómenos que se presentan en la naturaleza. También desarrollará habilidades para utilizar las técnicas y procedimientos de las ecuaciones diferenciales para la modelación y resolución de problemas, utilizando los registros analítico o simbólico, gráfico o geométrico.</p></li>
+<li><p>Formular problemas en el contexto matemático y en otras disciplinas (Ingeniería, economía, ciencias sociales) que involucren un S.E.D.O. (Sistemas de ecuaciones Diferenciales Ordinarias) Se emplearán los registros analíticos, gráficos para obtener, analizar y resolver dicho S.E.D.O.</p></li>
+<li><p>Resolver ecuaciones y sistemas de ecuaciones diferenciales ordinarias que involucren condiciones iniciales utilizando transformadas integrales.</p></li>
+</ul>
+</div>
+<div class="section" id="objetivos-especificos">
+<h2>Objetivos específicos<a class="headerlink" href="#objetivos-especificos" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Construir modelos sencillos de problemas específicos que se presentan en otras disciplinas a través de ecuaciones diferenciales de primer orden; resolver e interpretar las soluciones en el contexto del problema.</p></li>
+<li><p>Comprender que las ecuaciones diferenciales permiten modelar diversos problemas de otras disciplinas.</p></li>
+<li><p>Expresar de forma escrita, utilizando dos tipos de registro (analítico y gráfico) la solución o familias de soluciones de un S.E.D.O.</p></li>
+<li><p>Reconocer problemas relacionados con las ciencias físicas, la ingeniería, la economía y las ciencias sociales, que puedan modelarse por medio de un S.E.D.O.</p></li>
+<li><p>Calcular la Transformada de Laplace de funciones básicas utilizando la definición.</p></li>
+<li><p>Aplicar propiedades de la Transformada de Laplace (linealidad, teoremas de traslación, transformadas de derivadas, Teorema de Convolución) para calcular la transformadas de uso frecuente en la obtención de la solución de ecuaciones diferenciales.</p></li>
+</ul>
+</div>
+<div class="section" id="metodologia">
+<h2>Metodología<a class="headerlink" href="#metodologia" title="Permalink to this headline">#</a></h2>
+<p>En cada del curso sesión de clase (encuentro sincrónico mediante una plataforma virtual) se espera que los estudiantes participen activamente en el proceso de enseñanza - aprendizaje. (Los estudiantes deben estudiar el material antes de cada clase presente en el portal del curso sobre la plataforma de Brigespace). El profesor dará explicaciones formales de los temas, propondrá ejemplos y ejercicios que ayuden al estudiante a apropiarse de los conceptos, procedimientos y técnicas de los temas a estudiar. Bajo esta modalidad, los estudiantes deben realizar gran parte del trabajo por fuera de los encuentros sincrónicos. La clase se convierte en un espacio de confrontación, discusión e institucionalización de todas aquellas reflexiones y conclusiones de los estudiantes que se desarrollarán en el curso.</p>
+</div>
+<div class="section" id="unidades-tematicas">
+<h2>Unidades temáticas<a class="headerlink" href="#unidades-tematicas" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>Introducción a las ecuaciones diferenciales ordinarias (5 semanas)</p>
+<ul class="simple">
+<li><p>Definiciones, notación y primeros ejemplos de Ecuaciones Diferenciales ordinarias. Forma normal de una ecuación diferencial ordinaria. Concepto de Solución de una ecuación diferencial. Interpretación geométrica. Campo de direcciones. Problema de Cauchy.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Métodos de Integración. Ecuaciones de variables separables (ecuaciones autónomas) Estabilidad de equilibrios. (Criterio de estabilidad para el caso escalar) Diagramas de Fase. Modelo de Malthus y parámetro de bifurcación.</p></li>
+<li><p>Ecuación Lineal Homogénea. Ecuación lineal Completa. Fórmula de Variación de Constantes (versión 1 dimensional). Ejemplos y aplicaciones (Circuitos RL, RC, Modelos de compartimientos) [Modelos con parámetros]</p></li>
+<li><p>Cambios de variable. (ejemplos y ejercicios de las ecuaciones homogéneas, ecuaciones tipo Bernoulli). Aplicaciones a Física, Biología, y Economía. [Modelos con parámetros]</p></li>
+</ul>
+</li>
+<li><p>Sistemas de ecuaciones ordinarias (5 Semanas)</p>
+<ul class="simple">
+<li><p>Sistemas de lineales de la forma <span class="math notranslate nohighlight">\(\dot{X}(t)=A(t)X+B(t)\)</span>, con <span class="math notranslate nohighlight">\(A:I\subset \mathsf{R}\to M_{m\times m }(\mathsf{R})\)</span>.</p></li>
+<li><p>Problema de Cauchy. Matriz Fundamental, propiedades y Fórmula de Jacobi. Reducción de Orden. (Método del Wronskiano). Aplicación a ecuaciones lineales del orden 2. Presentación del Teorema de existencia y Unicidad. Fórmula de Variación de constantes. Ejemplos en los casos .</p></li>
+<li><p>Sistema de ecuaciones diferenciales ordinarias con coeficientes constantes <span class="math notranslate nohighlight">\((A(t)=A\in M_{2\times 2}(\mathsf{R}))\)</span> Matriz exponencial <span class="math notranslate nohighlight">\((e^{B},\in M_{2\times 2}(\mathsf{R}))\)</span>. Cálculo de la matriz exponencial. Casos especiales para matrices diagonales y nilpotentes</p></li>
+<li><p>Ecuaciones diferenciales de Orden superior. Definición del operador diferencial lineal <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(L(x)=\tilde{x}+a_1\dot{x}+a_0\)</span> . Análisis de la ecuación <span class="math notranslate nohighlight">\(L(x)=b(t)\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Teoría de estabilidad y sistemas lineales autónomos (4 Semanas)</p>
+<ul class="simple">
+<li><p>Concepto de estabilidad del equilibrio en sistemas <span class="math notranslate nohighlight">\(\dot{Y}=AY\)</span> , con <span class="math notranslate nohighlight">\(A:I\subset \mathsf{R}\to M_{2\times 2 }(\mathsf{R})\)</span>, y <span class="math notranslate nohighlight">\(Y:I\subset \mathsf{R}\to \mathsf{R}^2 \)</span> . Clasificación del tipo de estabilidad del equilibrio. Diagrama de fases para el sistema canónico asociado a <span class="math notranslate nohighlight">\(\dot{X}=AX+B(t)\)</span></p></li>
+<li><p>Sistemas Autónomos No Lineales. Motivación y ejemplos. Osciladores no lineales. Sistemas Conservativos.</p></li>
+<li><p>Aproximación lineal. Análisis de estabilidad de equilibrios por el método de aproximación.</p></li>
+<li><p>Modelar y resolver problemas de aplicación clásicos que involucren Sistemas de Ecuaciones Diferenciales de orden 2 y 3. Problemas en física, problema de mezclas, problemas en Biología, Ingeniería. [Modelos con uno o más parámetros]</p></li>
+</ul>
+</li>
+<li><p>Transformada de Laplace (2 Semanas)</p>
+<ul class="simple">
+<li><p>Introducción a las transformadas integrales. Primeros ejemplos. Definición de transformada de Laplace. Propiedades fundamentales: Linealidad, Teorema de traslación, Teorema de Convolución. Transformada de derivadas.</p></li>
+<li><p>Resolución de ecuaciones diferenciales y sistemas de ecuaciones lineales con coeficientes constantes utilizando la transformada de Laplace. (Sistemas discontinuos) [Modelos con parámetros]</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="actividades-de-evaluacion">
+<h2>Actividades de evaluación<a class="headerlink" href="#actividades-de-evaluacion" title="Permalink to this headline">#</a></h2>
+<p>La evaluación será desde el aspecto sumativo, se realizarán cuatro exámenes parciales de conocimientos teóricos [20% c/u]. Con los exámenes parciales se espera “medir” que tanto han asimilado de los temas abordados a lo largo de las semanas que lo anteceden.  A continuación, se muestran los porcentajes asignados a cada uno de los ítems a considerar en la evaluación del curso.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Actividad</p></th>
+<th class="head"><p>Porcentaje</p></th>
+<th class="head"><p>Fecha</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Entregable 1</p></td>
+<td><p>12%</p></td>
+<td><p>25 de Febrero</p></td>
+</tr>
+<tr class="row-odd"><td><p>Evaluación individual 1</p></td>
+<td><p>20%</p></td>
+<td><p>25 de Febrero</p></td>
+</tr>
+<tr class="row-even"><td><p>Evaluación individual 2</p></td>
+<td><p>20%</p></td>
+<td><p>8 de Abril</p></td>
+</tr>
+<tr class="row-odd"><td><p>Entregable 3</p></td>
+<td><p>12%</p></td>
+<td><p>13 de Mayo</p></td>
+</tr>
+<tr class="row-even"><td><p>Evaluación individual 3</p></td>
+<td><p>20%</p></td>
+<td><p>13 de Mayo</p></td>
+</tr>
+<tr class="row-odd"><td><p>Taller Final</p></td>
+<td><p>16%</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="bibliografia">
+<h1>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fdocuments.in/document/ecuaciones-diferenciales-paul-blanchard-robert-l-devaney-glen-r-hall-558463671d8ca.html">Blanchard Paul, Devaney Robert L. y Hall Glen R. Ecuaciones diferenciales Thomson editores 1999.</a></p></li>
+<li><p>Boyce-DiPrima. Ecuaciones Diferenciales y Problemas con valores en la frontera. Cuarta edición. Editorial Limusa. México, 2002.</p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "executablebooks/jupyter-book",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapter1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Abel Alvarez<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
