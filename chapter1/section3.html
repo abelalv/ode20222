@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Solución lineal de primer orden, homogenea &#8212; Una introducción a las ecuaciones diferenciales</title>
+    <title>Solución lineal de primer orden &#8212; Una introducción a las ecuaciones diferenciales</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -127,7 +127,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Solución lineal de primer orden, homogenea
+   Solución lineal de primer orden
   </a>
  </li>
 </ul>
@@ -354,29 +354,27 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solucion-lineal-de-primer-orden-homogenea">
    Solución lineal de primer orden, homogenea
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ejemplo">
-     Ejemplo
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejemplo">
+   Ejemplo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solucion-lineal-de-primer-orden-general">
    Solución lineal de primer orden, general
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
    Ejemplo
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ejercicios">
    Ejercicios
   </a>
@@ -390,7 +388,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Solución lineal de primer orden, homogenea</h1>
+                <h1>Solución lineal de primer orden</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -400,29 +398,27 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solucion-lineal-de-primer-orden-homogenea">
    Solución lineal de primer orden, homogenea
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ejemplo">
-     Ejemplo
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejemplo">
+   Ejemplo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solucion-lineal-de-primer-orden-general">
    Solución lineal de primer orden, general
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
    Ejemplo
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ejercicios">
    Ejercicios
   </a>
@@ -437,8 +433,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="solucion-lineal-de-primer-orden-homogenea">
-<h1>Solución lineal de primer orden, homogenea<a class="headerlink" href="#solucion-lineal-de-primer-orden-homogenea" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="solucion-lineal-de-primer-orden">
+<h1>Solución lineal de primer orden<a class="headerlink" href="#solucion-lineal-de-primer-orden" title="Permalink to this headline">#</a></h1>
+<section id="solucion-lineal-de-primer-orden-homogenea">
+<h2>Solución lineal de primer orden, homogenea<a class="headerlink" href="#solucion-lineal-de-primer-orden-homogenea" title="Permalink to this headline">#</a></h2>
 <p>Una ecuación diferenacial de primer orden es de la forma</p>
 <div class="math notranslate nohighlight">
 \[a(t)y'+b(t)y=c(t)\]</div>
@@ -466,6 +464,7 @@ $<span class="math notranslate nohighlight">\(y'(t)+P(t)y(t)=0\)</span>$</p>
 <p>de esta forma tenemos que</p>
 <div class="math notranslate nohighlight">
 \[y(t)=Ce^{-\int P(\tau)d\tau}\]</div>
+</section>
 <section id="ejemplo">
 <h2>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this headline">#</a></h2>
 <p>Resolver la ecuación</p>
@@ -484,9 +483,8 @@ $<span class="math notranslate nohighlight">\(y'(t)+P(t)y(t)=0\)</span>$</p>
 <div class="math notranslate nohighlight">
 \[y=\frac{c}{\sqrt{x^2-9}}\]</div>
 </section>
-</section>
 <section id="solucion-lineal-de-primer-orden-general">
-<h1>Solución lineal de primer orden, general<a class="headerlink" href="#solucion-lineal-de-primer-orden-general" title="Permalink to this headline">#</a></h1>
+<h2>Solución lineal de primer orden, general<a class="headerlink" href="#solucion-lineal-de-primer-orden-general" title="Permalink to this headline">#</a></h2>
 <p>Ahora en forma general para resolver una ecuación linela tenemos</p>
 <p>a. Escribamos la ecuación en la forma canónica</p>
 <div class="math notranslate nohighlight">
@@ -504,7 +502,7 @@ $<span class="math notranslate nohighlight">\(y'(t)+P(t)y(t)=0\)</span>$</p>
 \[y(t)=\frac{1}{\mu(t)}\Big(\int\mu(t)Q(t)dt+C\Big).\]</div>
 </section>
 <section id="id1">
-<h1>Ejemplo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h2>Ejemplo<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>Resuelva el problema de valor inicial <span class="math notranslate nohighlight">\(\frac{dy}{dt}+y=t\)</span> con <span class="math notranslate nohighlight">\(y(0)=4\)</span></p>
 <p>note que en la forma general de la ecuación <span class="math notranslate nohighlight">\(P(t)=1\)</span> y <span class="math notranslate nohighlight">\(Q(t)=t\)</span>, así el factor de integración es</p>
 <div class="math notranslate nohighlight">
@@ -523,7 +521,7 @@ $<span class="math notranslate nohighlight">\(y'(t)+P(t)y(t)=0\)</span>$</p>
 \[y=t-1+5e^{-t}\text{ para }t\in\Re.\]</div>
 </section>
 <section id="ejercicios">
-<h1>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">#</a></h1>
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Resolver <span class="math notranslate nohighlight">\(\frac{dy}{dx}+y=f(x)\text{ donde } f(x)=\begin{cases}1,\text{ si }0\leq x\leq 1,\\0 \text{ si } x&gt;1.\end{cases}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\frac{dy}{dx}+y=e^{3x}\)</span></p></li>
@@ -549,6 +547,7 @@ del decaimiento de un tipo especial de series de elementos radiactivos:</p></li>
 \[ \frac{dy}{dt}=\lambda_1x-\lambda_2y\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\lambda_1\)</span> y <span class="math notranslate nohighlight">\(\lambda_2\)</span> son constantes. Analice cómo resolver
 este sistema sujeto a <span class="math notranslate nohighlight">\(x(0) = x_0\)</span>, <span class="math notranslate nohighlight">\(y(0) = y_0\)</span>. Ponga en práctica sus ideas.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
